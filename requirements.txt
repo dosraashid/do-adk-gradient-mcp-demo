@@ -1,6 +1,11 @@
-gradient-adk
-langgraph
-langchain-core
-langchain-openai
-httpx
-python-dotenv
+# --- Core Framework ---
+gradient-adk         # DigitalOcean's Agent Development Kit for hosting and @entrypoint logic
+langgraph            # Orchestration for state machines, tool-calling loops, and memory persistence
+
+# --- AI & Reasoning ---
+langchain-core       # Standardized message types (HumanMessage, AIMessage) and tool decorators
+langchain-openai     # The client used to communicate with DigitalOcean's Llama-3 inference endpoint
+
+# --- Infrastructure & Utilities ---
+httpx                # Async HTTP client for performing the JSON-RPC handshakes with MCP servers
+python-dotenv        # Loads API tokens and Model Access Keys from your local .env file
