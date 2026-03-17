@@ -191,7 +191,7 @@ This agent uses **Thread-Scoped Persistence** via LangGraph Checkpointers. Run t
 | **1. Establish Context** | Fetch cloud data & save to Thread A. | `'{"prompt": "List my DigitalOcean droplets.", "thread_id": "alpha"}'` | Agent triggers `droplet-list` via the MCP handshake and returns your active droplets. |
 | **2. Test Reasoning** | Verify the agent can analyze previously fetched data. | `'{"prompt": "Based on that list, which Droplet was created first?", "thread_id": "alpha"}'` | Agent retrieves the previous tool output from memory and identifies the specific resource. |
 | **3. Verify Context Recall** | Test exact conversation history recall in same thread. | `'{"prompt": "What was the very first question I asked you?", "thread_id": "alpha"}'` | Checkpointer retrieves the history; agent accurately replies that you asked to list droplets. |
-| **4. Test Thread Isolation** | Prove memory is strictly scoped and isolated. | `'{"prompt": "What was the very second question I asked you?", "thread_id": "beta"}'` | Agent looks at the isolated `beta` thread, sees no history, and treats this as a brand-new conversation. |
+| **4. Test Thread Isolation** | Prove memory is strictly scoped and isolated. | `'{"prompt": "What was the second question I asked you?", "thread_id": "beta"}'` | Agent looks at the isolated `beta` thread, sees no history, and treats this as a brand-new conversation. |
 
 ---
 
