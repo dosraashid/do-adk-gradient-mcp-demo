@@ -156,7 +156,7 @@ curl -X POST http://localhost:8080/run \
 Once you have verified the agent's behavior locally, you can deploy it to the DigitalOcean Gradient™ AI Platform cloud. This transforms your local code into a managed, serverless endpoint.
 
 ```bash
-export $(cat .env | xargs)
+export $(grep -v '^#' .env | xargs)
 gradient agent deploy
 ```
 
