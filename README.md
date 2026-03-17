@@ -85,7 +85,7 @@ Use these prompts to showcase the unique capabilities of your **MCP + LangGraph 
 
 ### 1. Prerequisites
 - **Python 3.12** recommended for the latest LangGraph and Asyncio features.
-- **DigitalOcean API Token**: Needs `genai` scopes (`create`, `read`, `update`). [Generate API Token here](https://cloud.digitalocean.com/account/api/tokens).
+- **DigitalOcean API Token**: Needs `read` permissions for resources and `create`, `read` and `update` scopes on `genai`. [Generate API Token here](https://cloud.digitalocean.com/account/api/tokens).
 - **Gradient™ Model Access Key**: Required to access the Serverless Inference endpoint for local testing. [Generate Model Access Key here](https://cloud.digitalocean.com/gen-ai/model-access-keys).
 
 ### 2. Environment Setup
@@ -178,7 +178,7 @@ Finding your AGENT_ENDPOINT: This URL is printed in your terminal immediately af
 
 **Important: Authorization Token**
 
-The $DIGITALOCEAN_API_TOKEN used in the header must be a Personal Access Token with `genai` permissions. This ensures the request is authorized to trigger the agent's inference engine and execute the underlying MCP tools.
+The $DIGITALOCEAN_API_TOKEN used in the header must be a Personal Access Token with `read` permissions. [Generate API Token here](https://cloud.digitalocean.com/account/api/tokens). This ensures the request is authorized to trigger the agent's inference engine and execute the underlying MCP tools.
 
 ---
 
